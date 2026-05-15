@@ -1,87 +1,93 @@
-import { View, Text, Image, ScrollView, StyleSheet } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { View, Text, Image, ScrollView, StyleSheet } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function PerfilScreen() {
   return (
-    <scrollView style={StyleSheet.tela}>
-      <View style={StyleSheet.header}>
-        <Text style={StyleSheet.headerTexto}>DEVSTART</Text>
+    <ScrollView style={styles.tela}>
+
+      <View style={styles.header}>
+        <Text style={styles.headerTexto}>🐄 DevStart</Text>
       </View>
 
-      <View style={StyleSheet.perfil}>
-        <Image source={require("../assets/jota.jpg")} style={styles.foto} />
-        <Text style={styles.secao}>
-          <View styles={styles.secaoTitulo}>
-            <Ionicons name="person-outilne" size={18} color="#111" />
-          </View>
-          <Text style={styles.texto}>
-            Estudante de tecnologia apaixonado por desenvolvimento mobile.
-            Buscando minha primeira oportunidade na área. 🚀
-          </Text>
+      <View style={styles.perfil}>
+        <Image source={require('../assets/jota.jpg')} style={styles.foto} />
+        <Text style={styles.nome}>João Stopiglia</Text>
+        <Text style={styles.cargo}>Dev Junior</Text>
+      </View>
+
+      <View style={styles.secao}>
+        <View style={styles.secaoTitulo}>
+          <Ionicons name="person-outline" size={18} color="#111" />
+          <Text style={styles.titulo}>  Sobre mim</Text>
+        </View>
+        <Text style={styles.texto}>
+          Estudante de tecnologia apaixonado por desenvolvimento mobile.
+          Buscando minha primeira oportunidade na área. 🚀
         </Text>
       </View>
-    </scrollView>
+
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   tela: {
     flex: 1,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: '#f5f5f5',
   },
   header: {
-    backgroundColor: "#111",
+    backgroundColor: '#111',
     padding: 20,
     paddingTop: 50,
   },
   headerTexto: {
-    color: "#fff",
+    color: '#fff',
     fontSize: 18,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   perfil: {
-    alignItems: "center",
+    alignItems: 'center',
     paddingVertical: 24,
-    backgroundColor: "#fff",
+    backgroundColor: '#fff',
     borderBottomWidth: 1,
-    borderColor: "#eee",
+    borderColor: '#eee',
   },
   foto: {
     width: 90,
     height: 90,
     borderRadius: 45,
-    backgroundColor: "#ddd",
+    backgroundColor: '#ddd',
     marginBottom: 12,
   },
   nome: {
     fontSize: 20,
-    fontWeight: "bold",
-    color: "#111",
+    fontWeight: 'bold',
+    color: '#111',
   },
   cargo: {
-    fontSize: 20,
-    color: "#888",
+    fontSize: 14,
+    color: '#888',
     marginTop: 4,
   },
   secao: {
-    backgroundColor: "#fff",
+    backgroundColor: '#fff',
     margin: 16,
     padding: 16,
     borderRadius: 12,
   },
   secaoTitulo: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     marginBottom: 10,
   },
   titulo: {
-    fontsize: 15,
-    fontWeight: "Bold",
-    color: "#111",
+    fontSize: 15,
+    fontWeight: 'bold',
+    color: '#111',
   },
   texto: {
     fontSize: 14,
-    color: "#555",
+    color: '#555',
     lineHeight: 22,
   },
 });

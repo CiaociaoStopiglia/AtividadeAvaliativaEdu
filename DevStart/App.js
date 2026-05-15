@@ -16,5 +16,5 @@ export default function App() {
         <Tab.Screen name="Projetos" component={ProjetosScreen} />
       </Tab.Navigator>
     </NavigationContainer>
-  );
+  )
 }
